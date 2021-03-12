@@ -18,6 +18,7 @@ public class Json {
         list.add("code");
         list.add("quiz");
         list.add("try");
+        list.add("hello");
             // must be in synchronized block
             Iterator it = list.iterator();
 
