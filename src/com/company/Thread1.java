@@ -35,7 +35,10 @@ public class Thread1 {
         Test t3 = new Test("Naveen",d);
         t3.start();
         Tap t4 = new Tap();
+        Tap t5 = new Tap();
         t4.setDaemon(true);
         t4.start();
+        t5.setDaemon(true);
+        t5.start();
     }
 }
