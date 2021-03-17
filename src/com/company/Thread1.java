@@ -17,6 +17,14 @@ class Test extends Thread{
         System.out.println("Ending "+Thread.currentThread().getName());}
     }
 }
+class Tap extends Thread{
+    @Override
+    public void run() {
+        while(true){
+            System.out.println("Daemon Running");
+        }
+    }
+}
 public class Thread1 {
     public static void main(String arg[])throws InterruptedException{
         Display d = new Display();
@@ -26,5 +34,8 @@ public class Thread1 {
         t2.start();
         Test t3 = new Test("Naveen",d);
         t3.start();
+        Tap t4 = new Tap();
+        t4.setDaemon(true);
+        t4.start();
     }
 }
