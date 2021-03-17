@@ -72,5 +72,6 @@ public class Wait {
         Produce pr = new Produce(p);
         pr.start();
         c.start();
+        System.out.print("Hello");
     }
 }
